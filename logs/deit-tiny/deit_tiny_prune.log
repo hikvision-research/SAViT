@@ -1,0 +1,671 @@
+[2023-07-27 15:22:48 DeiT] (main.py 228): WARNING GPU 0 run on process 892
+[2023-07-27 15:22:48 DeiT] (main.py 232): INFO ----------running configuration----------
+batch_size: 32 
+epochs: 1 
+model: deit_tiny_patch16_224 
+input_size: 224 
+drop: 0.0 
+drop_path: 0.1 
+model_ema: False 
+model_ema_decay: 0.99996 
+model_ema_force_cpu: False 
+pruning_method: 2 
+pruning_layers: 3 
+pruning_feed_percent: 0.1 
+pruning_frequency: 2 
+pruning_per_iteration: 100 
+maximum_pruning_iterations: 24000 
+pruning_flops_percentage: 0.235 
+pruning_flops_threshold: 0.0001 
+pruning_iterative: False 
+need_hessian: True 
+pruning_momentum: 0.9 
+pruning_silent: False 
+pruning_pickle_from:  
+pruning_normalize_by_layer: False 
+pruning_normalize_type: 2 
+pruning_protect: True 
+opt: adamw 
+opt_eps: 1e-08 
+opt_betas: None 
+clip_grad: None 
+momentum: 0.9 
+weight_decay: 0.05 
+sched: cosine 
+lr: 0.0005 
+lr_noise: None 
+lr_noise_pct: 0.67 
+lr_noise_std: 1.0 
+warmup_lr: 1e-06 
+min_lr: 1e-05 
+decay_epochs: 30 
+warmup_epochs: 5 
+cooldown_epochs: 10 
+patience_epochs: 10 
+decay_rate: 0.1 
+color_jitter: 0.4 
+aa: rand-m9-mstd0.5-inc1 
+smoothing: 0.1 
+train_interpolation: bicubic 
+repeated_aug: True 
+crop_pct: None 
+reprob: 0.25 
+remode: pixel 
+recount: 1 
+resplit: False 
+mixup: 0.8 
+cutmix: 1.0 
+cutmix_minmax: None 
+mixup_prob: 1.0 
+mixup_switch_prob: 0.5 
+mixup_mode: batch 
+teacher_model: regnety_160 
+teacher_path:  
+distillation_type: none 
+distillation_alpha: 0.5 
+distillation_tau: 1.0 
+finetune: /model_zoo/deit/deit_tiny_patch16_224-a1311bcf.pth 
+finetune_op: 2 
+data_path: /dataset/public/ImageNet/ 
+data_set: IMNET 
+inat_category: name 
+not_imagenet_default_mean_and_std: False 
+output_dir: /deit_experiments_savit/tiny 
+save_freq: 50 
+device: cuda 
+seed: 0 
+resume:  
+start_epoch: 0 
+eval: False 
+dist_eval: False 
+num_workers: 16 
+pin_mem: True 
+world_size: 1 
+dist_url: env:// 
+log: /deit_experiments_savit/tiny 
+log_period: 10 
+distributed: False 
+
+[2023-07-27 15:23:04 DeiT] (main.py 296): INFO Creating model: deit_tiny_patch16_224
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.0.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.0.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.0.res_gate.weight shape:torch.Size([192])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.1.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.1.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.2.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.2.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.3.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.3.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.4.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.4.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.5.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.5.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.6.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.6.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.7.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.7.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.8.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.8.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.9.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.9.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.10.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.10.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.11.attn.attn_gate.weight shape:torch.Size([3])
+[2023-07-27 15:23:09 DeiT] (main.py 366): INFO skipping parameter:blocks.11.mlp.hidden_gate1.weight shape:torch.Size([768])
+[2023-07-27 15:23:09 DeiT] (main.py 425): INFO model complexity before pruning
+[2023-07-27 15:23:10 DeiT] (utils.py 55): INFO number of params:5726860
+[2023-07-27 15:23:10 DeiT] (utils.py 56): INFO number of Attention GFLOPs:0.5276098251342773
+[2023-07-27 15:23:10 DeiT] (utils.py 57): INFO number of FC GFLOPs:0.6973639726638794
+[2023-07-27 15:23:10 DeiT] (utils.py 58): INFO number of total GFLOPs:1.2545909881591797
+[2023-07-27 15:23:10 DeiT] (main.py 434): INFO Total pruning layers:12
+[2023-07-27 15:23:10 DeiT] (main.py 434): INFO Total pruning layers:12
+[2023-07-27 15:23:10 DeiT] (main.py 434): INFO Total pruning layers:1
+[2023-07-27 15:23:10 DeiT] (main.py 469): INFO Start one-shot pruning
+[2023-07-27 15:23:19 DeiT] (utils.py 143): INFO Epoch: [0]  [    0/40032]  eta: 3 days, 21:58:54  lr: 0.000001  loss: 3.8933 (3.8933)  time: 8.4516  data: 3.2325  max mem: 4561
+[2023-07-27 15:23:36 DeiT] (utils.py 143): INFO Epoch: [0]  [   10/40032]  eta: 1 day, 2:04:26  lr: 0.000001  loss: 3.8933 (3.9201)  time: 2.3454  data: 0.2942  max mem: 4563
+[2023-07-27 15:23:53 DeiT] (utils.py 143): INFO Epoch: [0]  [   20/40032]  eta: 22:54:43  lr: 0.000001  loss: 3.7801 (3.7414)  time: 1.7420  data: 0.0004  max mem: 4563
+[2023-07-27 15:24:12 DeiT] (utils.py 143): INFO Epoch: [0]  [   30/40032]  eta: 22:15:57  lr: 0.000001  loss: 3.6268 (3.8209)  time: 1.8160  data: 0.0005  max mem: 4563
+[2023-07-27 15:24:29 DeiT] (utils.py 143): INFO Epoch: [0]  [   40/40032]  eta: 21:28:16  lr: 0.000001  loss: 4.0202 (3.8143)  time: 1.7977  data: 0.0006  max mem: 4563
+[2023-07-27 15:24:47 DeiT] (utils.py 143): INFO Epoch: [0]  [   50/40032]  eta: 21:05:47  lr: 0.000001  loss: 3.6215 (3.7796)  time: 1.7379  data: 0.0005  max mem: 4563
+[2023-07-27 15:25:04 DeiT] (utils.py 143): INFO Epoch: [0]  [   60/40032]  eta: 20:41:16  lr: 0.000001  loss: 3.4560 (3.7163)  time: 1.7205  data: 0.0005  max mem: 4563
+[2023-07-27 15:25:21 DeiT] (utils.py 143): INFO Epoch: [0]  [   70/40032]  eta: 20:32:01  lr: 0.000001  loss: 3.3523 (3.7039)  time: 1.7229  data: 0.0005  max mem: 4563
+[2023-07-27 15:25:39 DeiT] (utils.py 143): INFO Epoch: [0]  [   80/40032]  eta: 20:23:00  lr: 0.000001  loss: 3.6778 (3.6900)  time: 1.7559  data: 0.0005  max mem: 4563
+[2023-07-27 15:25:57 DeiT] (utils.py 143): INFO Epoch: [0]  [   90/40032]  eta: 20:22:59  lr: 0.000001  loss: 3.6293 (3.6878)  time: 1.7922  data: 0.0005  max mem: 4563
+[2023-07-27 15:26:16 DeiT] (utils.py 143): INFO Epoch: [0]  [  100/40032]  eta: 20:26:06  lr: 0.000001  loss: 3.6293 (3.6896)  time: 1.8649  data: 0.0005  max mem: 4563
+[2023-07-27 15:26:33 DeiT] (utils.py 143): INFO Epoch: [0]  [  110/40032]  eta: 20:15:52  lr: 0.000001  loss: 3.7490 (3.6835)  time: 1.7829  data: 0.0005  max mem: 4563
+[2023-07-27 15:26:50 DeiT] (utils.py 143): INFO Epoch: [0]  [  120/40032]  eta: 20:09:20  lr: 0.000001  loss: 3.6481 (3.6678)  time: 1.6954  data: 0.0005  max mem: 4563
+[2023-07-27 15:27:06 DeiT] (utils.py 143): INFO Epoch: [0]  [  130/40032]  eta: 19:59:01  lr: 0.000001  loss: 3.4823 (3.6498)  time: 1.6675  data: 0.0005  max mem: 4563
+[2023-07-27 15:27:24 DeiT] (utils.py 143): INFO Epoch: [0]  [  140/40032]  eta: 19:55:17  lr: 0.000001  loss: 3.3649 (3.6311)  time: 1.6754  data: 0.0005  max mem: 4563
+[2023-07-27 15:27:41 DeiT] (utils.py 143): INFO Epoch: [0]  [  150/40032]  eta: 19:50:05  lr: 0.000001  loss: 3.5634 (3.6262)  time: 1.7083  data: 0.0005  max mem: 4563
+[2023-07-27 15:27:57 DeiT] (utils.py 143): INFO Epoch: [0]  [  160/40032]  eta: 19:43:53  lr: 0.000001  loss: 3.3730 (3.6230)  time: 1.6671  data: 0.0006  max mem: 4563
+[2023-07-27 15:28:14 DeiT] (utils.py 143): INFO Epoch: [0]  [  170/40032]  eta: 19:39:50  lr: 0.000001  loss: 3.7345 (3.6315)  time: 1.6663  data: 0.0005  max mem: 4563
+[2023-07-27 15:28:32 DeiT] (utils.py 143): INFO Epoch: [0]  [  180/40032]  eta: 19:39:21  lr: 0.000001  loss: 3.7903 (3.6247)  time: 1.7277  data: 0.0005  max mem: 4563
+[2023-07-27 15:28:50 DeiT] (utils.py 143): INFO Epoch: [0]  [  190/40032]  eta: 19:40:46  lr: 0.000001  loss: 3.7657 (3.6278)  time: 1.7978  data: 0.0005  max mem: 4563
+[2023-07-27 15:29:08 DeiT] (utils.py 143): INFO Epoch: [0]  [  200/40032]  eta: 19:40:36  lr: 0.000001  loss: 3.3700 (3.6065)  time: 1.8036  data: 0.0006  max mem: 4563
+[2023-07-27 15:29:23 DeiT] (utils.py 143): INFO Epoch: [0]  [  210/40032]  eta: 19:32:39  lr: 0.000001  loss: 3.3184 (3.6039)  time: 1.6586  data: 0.0006  max mem: 4563
+[2023-07-27 15:29:40 DeiT] (utils.py 143): INFO Epoch: [0]  [  220/40032]  eta: 19:31:04  lr: 0.000001  loss: 3.3422 (3.5939)  time: 1.6294  data: 0.0005  max mem: 4563
+[2023-07-27 15:29:57 DeiT] (utils.py 143): INFO Epoch: [0]  [  230/40032]  eta: 19:29:24  lr: 0.000001  loss: 3.1929 (3.5819)  time: 1.7205  data: 0.0004  max mem: 4563
+[2023-07-27 15:30:15 DeiT] (utils.py 143): INFO Epoch: [0]  [  240/40032]  eta: 19:28:53  lr: 0.000001  loss: 3.4096 (3.5794)  time: 1.7358  data: 0.0005  max mem: 4563
+[2023-07-27 15:30:32 DeiT] (utils.py 143): INFO Epoch: [0]  [  250/40032]  eta: 19:27:59  lr: 0.000001  loss: 3.6767 (3.5765)  time: 1.7471  data: 0.0005  max mem: 4563
+[2023-07-27 15:30:51 DeiT] (utils.py 143): INFO Epoch: [0]  [  260/40032]  eta: 19:29:10  lr: 0.000001  loss: 3.6313 (3.5769)  time: 1.7797  data: 0.0005  max mem: 4563
+[2023-07-27 15:31:08 DeiT] (utils.py 143): INFO Epoch: [0]  [  270/40032]  eta: 19:27:19  lr: 0.000001  loss: 3.4920 (3.5642)  time: 1.7599  data: 0.0005  max mem: 4563
+[2023-07-27 15:31:26 DeiT] (utils.py 143): INFO Epoch: [0]  [  280/40032]  eta: 19:27:54  lr: 0.000001  loss: 3.6991 (3.5737)  time: 1.7496  data: 0.0005  max mem: 4563
+[2023-07-27 15:31:43 DeiT] (utils.py 143): INFO Epoch: [0]  [  290/40032]  eta: 19:27:43  lr: 0.000001  loss: 3.5358 (3.5676)  time: 1.7831  data: 0.0006  max mem: 4563
+[2023-07-27 15:32:01 DeiT] (utils.py 143): INFO Epoch: [0]  [  300/40032]  eta: 19:27:49  lr: 0.000001  loss: 3.0738 (3.5537)  time: 1.7740  data: 0.0006  max mem: 4563
+[2023-07-27 15:32:18 DeiT] (utils.py 143): INFO Epoch: [0]  [  310/40032]  eta: 19:26:43  lr: 0.000001  loss: 3.1193 (3.5487)  time: 1.7535  data: 0.0005  max mem: 4563
+[2023-07-27 15:32:35 DeiT] (utils.py 143): INFO Epoch: [0]  [  320/40032]  eta: 19:24:22  lr: 0.000001  loss: 3.7769 (3.5627)  time: 1.6943  data: 0.0005  max mem: 4563
+[2023-07-27 15:32:53 DeiT] (utils.py 143): INFO Epoch: [0]  [  330/40032]  eta: 19:25:56  lr: 0.000001  loss: 3.8639 (3.5565)  time: 1.7573  data: 0.0005  max mem: 4563
+[2023-07-27 15:33:09 DeiT] (utils.py 143): INFO Epoch: [0]  [  340/40032]  eta: 19:21:39  lr: 0.000001  loss: 3.6793 (3.5649)  time: 1.7044  data: 0.0004  max mem: 4563
+[2023-07-27 15:33:27 DeiT] (utils.py 143): INFO Epoch: [0]  [  350/40032]  eta: 19:21:19  lr: 0.000001  loss: 3.7401 (3.5695)  time: 1.6552  data: 0.0004  max mem: 4563
+[2023-07-27 15:33:44 DeiT] (utils.py 143): INFO Epoch: [0]  [  360/40032]  eta: 19:20:15  lr: 0.000001  loss: 3.7363 (3.5690)  time: 1.7338  data: 0.0005  max mem: 4563
+[2023-07-27 15:34:01 DeiT] (utils.py 143): INFO Epoch: [0]  [  370/40032]  eta: 19:19:44  lr: 0.000001  loss: 3.4003 (3.5653)  time: 1.7277  data: 0.0005  max mem: 4563
+[2023-07-27 15:34:18 DeiT] (utils.py 143): INFO Epoch: [0]  [  380/40032]  eta: 19:18:06  lr: 0.000001  loss: 3.2541 (3.5624)  time: 1.7098  data: 0.0004  max mem: 4563
+[2023-07-27 15:34:34 DeiT] (utils.py 143): INFO Epoch: [0]  [  390/40032]  eta: 19:15:50  lr: 0.000001  loss: 3.3352 (3.5600)  time: 1.6566  data: 0.0004  max mem: 4563
+[2023-07-27 15:34:52 DeiT] (utils.py 143): INFO Epoch: [0]  [  400/40032]  eta: 19:15:49  lr: 0.000001  loss: 3.5929 (3.5630)  time: 1.7006  data: 0.0004  max mem: 4563
+[2023-07-27 15:35:10 DeiT] (utils.py 143): INFO Epoch: [0]  [  410/40032]  eta: 19:16:36  lr: 0.000001  loss: 3.6954 (3.5681)  time: 1.7915  data: 0.0004  max mem: 4563
+[2023-07-27 15:35:28 DeiT] (utils.py 143): INFO Epoch: [0]  [  420/40032]  eta: 19:17:13  lr: 0.000001  loss: 3.6954 (3.5677)  time: 1.8133  data: 0.0004  max mem: 4563
+[2023-07-27 15:35:43 DeiT] (utils.py 143): INFO Epoch: [0]  [  430/40032]  eta: 19:12:02  lr: 0.000001  loss: 3.4632 (3.5690)  time: 1.6213  data: 0.0005  max mem: 4563
+[2023-07-27 15:35:59 DeiT] (utils.py 143): INFO Epoch: [0]  [  440/40032]  eta: 19:09:41  lr: 0.000001  loss: 3.6331 (3.5714)  time: 1.5205  data: 0.0004  max mem: 4563
+[2023-07-27 15:36:16 DeiT] (utils.py 143): INFO Epoch: [0]  [  450/40032]  eta: 19:09:37  lr: 0.000001  loss: 3.6484 (3.5768)  time: 1.6825  data: 0.0004  max mem: 4563
+[2023-07-27 15:36:32 DeiT] (utils.py 143): INFO Epoch: [0]  [  460/40032]  eta: 19:07:16  lr: 0.000001  loss: 3.3845 (3.5704)  time: 1.6779  data: 0.0004  max mem: 4563
+[2023-07-27 15:36:49 DeiT] (utils.py 143): INFO Epoch: [0]  [  470/40032]  eta: 19:06:06  lr: 0.000001  loss: 3.0148 (3.5656)  time: 1.6380  data: 0.0004  max mem: 4563
+[2023-07-27 15:37:05 DeiT] (utils.py 143): INFO Epoch: [0]  [  480/40032]  eta: 19:03:23  lr: 0.000001  loss: 3.2153 (3.5627)  time: 1.6189  data: 0.0004  max mem: 4563
+[2023-07-27 15:37:23 DeiT] (utils.py 143): INFO Epoch: [0]  [  490/40032]  eta: 19:03:57  lr: 0.000001  loss: 3.3967 (3.5643)  time: 1.6794  data: 0.0003  max mem: 4563
+[2023-07-27 15:37:41 DeiT] (utils.py 143): INFO Epoch: [0]  [  500/40032]  eta: 19:05:27  lr: 0.000001  loss: 3.3900 (3.5614)  time: 1.8352  data: 0.0005  max mem: 4563
+[2023-07-27 15:37:58 DeiT] (utils.py 143): INFO Epoch: [0]  [  510/40032]  eta: 19:04:37  lr: 0.000001  loss: 3.3988 (3.5666)  time: 1.7846  data: 0.0005  max mem: 4563
+[2023-07-27 15:38:14 DeiT] (utils.py 143): INFO Epoch: [0]  [  520/40032]  eta: 19:02:54  lr: 0.000001  loss: 3.8048 (3.5702)  time: 1.6604  data: 0.0004  max mem: 4563
+[2023-07-27 15:38:31 DeiT] (utils.py 143): INFO Epoch: [0]  [  530/40032]  eta: 19:01:50  lr: 0.000001  loss: 3.5992 (3.5677)  time: 1.6489  data: 0.0004  max mem: 4563
+[2023-07-27 15:38:47 DeiT] (utils.py 143): INFO Epoch: [0]  [  540/40032]  eta: 19:00:15  lr: 0.000001  loss: 3.4666 (3.5657)  time: 1.6507  data: 0.0004  max mem: 4563
+[2023-07-27 15:39:04 DeiT] (utils.py 143): INFO Epoch: [0]  [  550/40032]  eta: 18:59:06  lr: 0.000001  loss: 3.2790 (3.5617)  time: 1.6437  data: 0.0004  max mem: 4563
+[2023-07-27 15:39:20 DeiT] (utils.py 143): INFO Epoch: [0]  [  560/40032]  eta: 18:57:40  lr: 0.000001  loss: 3.8094 (3.5680)  time: 1.6472  data: 0.0004  max mem: 4563
+[2023-07-27 15:39:38 DeiT] (utils.py 143): INFO Epoch: [0]  [  570/40032]  eta: 18:58:14  lr: 0.000001  loss: 3.8264 (3.5722)  time: 1.7185  data: 0.0003  max mem: 4563
+[2023-07-27 15:39:56 DeiT] (utils.py 143): INFO Epoch: [0]  [  580/40032]  eta: 18:57:50  lr: 0.000001  loss: 3.8132 (3.5752)  time: 1.7616  data: 0.0004  max mem: 4563
+[2023-07-27 15:40:13 DeiT] (utils.py 143): INFO Epoch: [0]  [  590/40032]  eta: 18:57:58  lr: 0.000001  loss: 3.7324 (3.5778)  time: 1.7449  data: 0.0004  max mem: 4563
+[2023-07-27 15:40:29 DeiT] (utils.py 143): INFO Epoch: [0]  [  600/40032]  eta: 18:55:37  lr: 0.000001  loss: 3.4988 (3.5746)  time: 1.6560  data: 0.0004  max mem: 4563
+[2023-07-27 15:40:45 DeiT] (utils.py 143): INFO Epoch: [0]  [  610/40032]  eta: 18:54:15  lr: 0.000001  loss: 3.4193 (3.5739)  time: 1.5850  data: 0.0004  max mem: 4563
+[2023-07-27 15:41:01 DeiT] (utils.py 143): INFO Epoch: [0]  [  620/40032]  eta: 18:52:57  lr: 0.000001  loss: 3.7132 (3.5758)  time: 1.6290  data: 0.0004  max mem: 4563
+[2023-07-27 15:41:19 DeiT] (utils.py 143): INFO Epoch: [0]  [  630/40032]  eta: 18:52:58  lr: 0.000001  loss: 3.7132 (3.5769)  time: 1.6920  data: 0.0004  max mem: 4563
+[2023-07-27 15:41:36 DeiT] (utils.py 143): INFO Epoch: [0]  [  640/40032]  eta: 18:52:53  lr: 0.000001  loss: 3.6600 (3.5777)  time: 1.7498  data: 0.0004  max mem: 4563
+[2023-07-27 15:41:55 DeiT] (utils.py 143): INFO Epoch: [0]  [  650/40032]  eta: 18:53:42  lr: 0.000001  loss: 3.4930 (3.5737)  time: 1.7902  data: 0.0003  max mem: 4563
+[2023-07-27 15:42:12 DeiT] (utils.py 143): INFO Epoch: [0]  [  660/40032]  eta: 18:52:57  lr: 0.000001  loss: 3.3974 (3.5676)  time: 1.7577  data: 0.0003  max mem: 4563
+[2023-07-27 15:42:30 DeiT] (utils.py 143): INFO Epoch: [0]  [  670/40032]  eta: 18:54:17  lr: 0.000001  loss: 3.4403 (3.5683)  time: 1.7872  data: 0.0004  max mem: 4563
+[2023-07-27 15:42:46 DeiT] (utils.py 143): INFO Epoch: [0]  [  680/40032]  eta: 18:52:35  lr: 0.000001  loss: 3.5641 (3.5664)  time: 1.7373  data: 0.0003  max mem: 4563
+[2023-07-27 15:43:04 DeiT] (utils.py 143): INFO Epoch: [0]  [  690/40032]  eta: 18:53:10  lr: 0.000001  loss: 3.4150 (3.5662)  time: 1.7004  data: 0.0003  max mem: 4563
+[2023-07-27 15:43:20 DeiT] (utils.py 143): INFO Epoch: [0]  [  700/40032]  eta: 18:50:59  lr: 0.000001  loss: 3.2775 (3.5644)  time: 1.6725  data: 0.0004  max mem: 4563
+[2023-07-27 15:43:38 DeiT] (utils.py 143): INFO Epoch: [0]  [  710/40032]  eta: 18:51:11  lr: 0.000001  loss: 3.3007 (3.5615)  time: 1.6519  data: 0.0004  max mem: 4563
+[2023-07-27 15:43:54 DeiT] (utils.py 143): INFO Epoch: [0]  [  720/40032]  eta: 18:49:50  lr: 0.000001  loss: 3.3764 (3.5582)  time: 1.6929  data: 0.0004  max mem: 4563
+[2023-07-27 15:44:11 DeiT] (utils.py 143): INFO Epoch: [0]  [  730/40032]  eta: 18:49:16  lr: 0.000001  loss: 3.5234 (3.5566)  time: 1.6505  data: 0.0004  max mem: 4563
+[2023-07-27 15:44:29 DeiT] (utils.py 143): INFO Epoch: [0]  [  740/40032]  eta: 18:50:06  lr: 0.000001  loss: 3.6702 (3.5592)  time: 1.7726  data: 0.0004  max mem: 4563
+[2023-07-27 15:44:46 DeiT] (utils.py 143): INFO Epoch: [0]  [  750/40032]  eta: 18:49:58  lr: 0.000001  loss: 3.8240 (3.5609)  time: 1.7979  data: 0.0004  max mem: 4563
+[2023-07-27 15:45:03 DeiT] (utils.py 143): INFO Epoch: [0]  [  760/40032]  eta: 18:49:05  lr: 0.000001  loss: 3.9926 (3.5620)  time: 1.6997  data: 0.0004  max mem: 4563
+[2023-07-27 15:45:20 DeiT] (utils.py 143): INFO Epoch: [0]  [  770/40032]  eta: 18:48:24  lr: 0.000001  loss: 3.7076 (3.5642)  time: 1.6673  data: 0.0004  max mem: 4563
+[2023-07-27 15:45:37 DeiT] (utils.py 143): INFO Epoch: [0]  [  780/40032]  eta: 18:47:44  lr: 0.000001  loss: 3.7825 (3.5641)  time: 1.6784  data: 0.0004  max mem: 4563
+[2023-07-27 15:45:52 DeiT] (utils.py 143): INFO Epoch: [0]  [  790/40032]  eta: 18:45:52  lr: 0.000001  loss: 3.7825 (3.5652)  time: 1.6054  data: 0.0003  max mem: 4563
+[2023-07-27 15:46:09 DeiT] (utils.py 143): INFO Epoch: [0]  [  800/40032]  eta: 18:45:18  lr: 0.000001  loss: 3.7719 (3.5665)  time: 1.6104  data: 0.0003  max mem: 4563
+[2023-07-27 15:46:24 DeiT] (utils.py 143): INFO Epoch: [0]  [  810/40032]  eta: 18:43:34  lr: 0.000001  loss: 3.3224 (3.5581)  time: 1.6145  data: 0.0004  max mem: 4563
+[2023-07-27 15:46:41 DeiT] (utils.py 143): INFO Epoch: [0]  [  820/40032]  eta: 18:42:58  lr: 0.000001  loss: 3.2500 (3.5600)  time: 1.6107  data: 0.0003  max mem: 4563
+[2023-07-27 15:46:59 DeiT] (utils.py 143): INFO Epoch: [0]  [  830/40032]  eta: 18:43:37  lr: 0.000001  loss: 3.3087 (3.5544)  time: 1.7584  data: 0.0003  max mem: 4563
+[2023-07-27 15:47:17 DeiT] (utils.py 143): INFO Epoch: [0]  [  840/40032]  eta: 18:43:54  lr: 0.000001  loss: 3.1406 (3.5526)  time: 1.8153  data: 0.0004  max mem: 4563
+[2023-07-27 15:47:33 DeiT] (utils.py 143): INFO Epoch: [0]  [  850/40032]  eta: 18:42:24  lr: 0.000001  loss: 3.2411 (3.5494)  time: 1.6787  data: 0.0004  max mem: 4563
+[2023-07-27 15:47:51 DeiT] (utils.py 143): INFO Epoch: [0]  [  860/40032]  eta: 18:43:06  lr: 0.000001  loss: 3.2411 (3.5467)  time: 1.7055  data: 0.0004  max mem: 4563
+[2023-07-27 15:48:09 DeiT] (utils.py 143): INFO Epoch: [0]  [  870/40032]  eta: 18:43:17  lr: 0.000001  loss: 3.3073 (3.5475)  time: 1.8149  data: 0.0005  max mem: 4563
+[2023-07-27 15:48:27 DeiT] (utils.py 143): INFO Epoch: [0]  [  880/40032]  eta: 18:43:15  lr: 0.000001  loss: 3.5330 (3.5466)  time: 1.7694  data: 0.0004  max mem: 4563
+[2023-07-27 15:48:43 DeiT] (utils.py 143): INFO Epoch: [0]  [  890/40032]  eta: 18:41:48  lr: 0.000001  loss: 3.6170 (3.5437)  time: 1.6597  data: 0.0003  max mem: 4563
+[2023-07-27 15:49:02 DeiT] (utils.py 143): INFO Epoch: [0]  [  900/40032]  eta: 18:43:07  lr: 0.000001  loss: 3.5307 (3.5429)  time: 1.7514  data: 0.0004  max mem: 4563
+[2023-07-27 15:49:18 DeiT] (utils.py 143): INFO Epoch: [0]  [  910/40032]  eta: 18:42:21  lr: 0.000001  loss: 3.5564 (3.5447)  time: 1.7980  data: 0.0004  max mem: 4563
+[2023-07-27 15:49:38 DeiT] (utils.py 143): INFO Epoch: [0]  [  920/40032]  eta: 18:43:31  lr: 0.000001  loss: 3.5748 (3.5461)  time: 1.7912  data: 0.0004  max mem: 4563
+[2023-07-27 15:49:55 DeiT] (utils.py 143): INFO Epoch: [0]  [  930/40032]  eta: 18:43:00  lr: 0.000001  loss: 3.8417 (3.5499)  time: 1.8080  data: 0.0004  max mem: 4563
+[2023-07-27 15:50:10 DeiT] (utils.py 143): INFO Epoch: [0]  [  940/40032]  eta: 18:41:42  lr: 0.000001  loss: 3.6594 (3.5475)  time: 1.6338  data: 0.0004  max mem: 4563
+[2023-07-27 15:50:27 DeiT] (utils.py 143): INFO Epoch: [0]  [  950/40032]  eta: 18:41:08  lr: 0.000001  loss: 3.0850 (3.5420)  time: 1.6289  data: 0.0004  max mem: 4563
+[2023-07-27 15:50:45 DeiT] (utils.py 143): INFO Epoch: [0]  [  960/40032]  eta: 18:41:21  lr: 0.000001  loss: 3.3152 (3.5447)  time: 1.7382  data: 0.0004  max mem: 4563
+[2023-07-27 15:51:03 DeiT] (utils.py 143): INFO Epoch: [0]  [  970/40032]  eta: 18:41:25  lr: 0.000001  loss: 3.7785 (3.5470)  time: 1.7850  data: 0.0003  max mem: 4563
+[2023-07-27 15:51:21 DeiT] (utils.py 143): INFO Epoch: [0]  [  980/40032]  eta: 18:41:37  lr: 0.000001  loss: 3.7357 (3.5482)  time: 1.7849  data: 0.0004  max mem: 4563
+[2023-07-27 15:51:38 DeiT] (utils.py 143): INFO Epoch: [0]  [  990/40032]  eta: 18:41:24  lr: 0.000001  loss: 3.5936 (3.5476)  time: 1.7651  data: 0.0005  max mem: 4563
+[2023-07-27 15:51:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1000/40032]  eta: 18:41:43  lr: 0.000001  loss: 3.6226 (3.5491)  time: 1.7750  data: 0.0004  max mem: 4563
+[2023-07-27 15:52:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1010/40032]  eta: 18:42:03  lr: 0.000001  loss: 3.7984 (3.5503)  time: 1.8188  data: 0.0004  max mem: 4563
+[2023-07-27 15:52:31 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1020/40032]  eta: 18:40:55  lr: 0.000001  loss: 3.7005 (3.5498)  time: 1.7072  data: 0.0004  max mem: 4563
+[2023-07-27 15:52:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1030/40032]  eta: 18:39:50  lr: 0.000001  loss: 3.5015 (3.5469)  time: 1.5958  data: 0.0004  max mem: 4563
+[2023-07-27 15:53:04 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1040/40032]  eta: 18:39:33  lr: 0.000001  loss: 3.5015 (3.5481)  time: 1.6608  data: 0.0004  max mem: 4563
+[2023-07-27 15:53:20 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1050/40032]  eta: 18:38:54  lr: 0.000001  loss: 3.5885 (3.5458)  time: 1.6937  data: 0.0005  max mem: 4563
+[2023-07-27 15:53:36 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1060/40032]  eta: 18:37:28  lr: 0.000001  loss: 3.8112 (3.5493)  time: 1.5994  data: 0.0004  max mem: 4563
+[2023-07-27 15:53:52 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1070/40032]  eta: 18:36:41  lr: 0.000001  loss: 3.8112 (3.5494)  time: 1.5859  data: 0.0004  max mem: 4563
+[2023-07-27 15:54:07 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1080/40032]  eta: 18:34:54  lr: 0.000001  loss: 3.5192 (3.5467)  time: 1.5547  data: 0.0004  max mem: 4563
+[2023-07-27 15:54:25 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1090/40032]  eta: 18:35:05  lr: 0.000001  loss: 3.3509 (3.5459)  time: 1.6343  data: 0.0004  max mem: 4563
+[2023-07-27 15:54:42 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1100/40032]  eta: 18:34:33  lr: 0.000001  loss: 3.3801 (3.5472)  time: 1.7352  data: 0.0004  max mem: 4563
+[2023-07-27 15:54:58 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1110/40032]  eta: 18:33:36  lr: 0.000001  loss: 3.8177 (3.5493)  time: 1.6398  data: 0.0004  max mem: 4563
+[2023-07-27 15:55:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1120/40032]  eta: 18:33:16  lr: 0.000001  loss: 3.7813 (3.5508)  time: 1.6563  data: 0.0004  max mem: 4563
+[2023-07-27 15:55:31 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1130/40032]  eta: 18:32:17  lr: 0.000001  loss: 3.6986 (3.5535)  time: 1.6513  data: 0.0004  max mem: 4563
+[2023-07-27 15:55:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1140/40032]  eta: 18:31:41  lr: 0.000001  loss: 3.6504 (3.5524)  time: 1.6278  data: 0.0004  max mem: 4563
+[2023-07-27 15:56:06 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1150/40032]  eta: 18:32:03  lr: 0.000001  loss: 3.6649 (3.5540)  time: 1.7458  data: 0.0004  max mem: 4563
+[2023-07-27 15:56:23 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1160/40032]  eta: 18:32:11  lr: 0.000001  loss: 3.8183 (3.5537)  time: 1.8115  data: 0.0003  max mem: 4563
+[2023-07-27 15:56:41 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1170/40032]  eta: 18:32:01  lr: 0.000001  loss: 3.6758 (3.5535)  time: 1.7649  data: 0.0003  max mem: 4563
+[2023-07-27 15:56:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1180/40032]  eta: 18:30:51  lr: 0.000001  loss: 3.7711 (3.5577)  time: 1.6473  data: 0.0004  max mem: 4563
+[2023-07-27 15:57:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1190/40032]  eta: 18:31:30  lr: 0.000001  loss: 3.7949 (3.5581)  time: 1.7221  data: 0.0004  max mem: 4563
+[2023-07-27 15:57:33 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1200/40032]  eta: 18:31:36  lr: 0.000001  loss: 3.6450 (3.5580)  time: 1.8374  data: 0.0004  max mem: 4563
+[2023-07-27 15:57:50 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1210/40032]  eta: 18:31:08  lr: 0.000001  loss: 3.6249 (3.5569)  time: 1.7365  data: 0.0004  max mem: 4563
+[2023-07-27 15:58:06 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1220/40032]  eta: 18:30:24  lr: 0.000001  loss: 3.3457 (3.5555)  time: 1.6595  data: 0.0004  max mem: 4563
+[2023-07-27 15:58:24 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1230/40032]  eta: 18:30:07  lr: 0.000001  loss: 3.3457 (3.5544)  time: 1.6740  data: 0.0004  max mem: 4563
+[2023-07-27 15:58:40 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1240/40032]  eta: 18:29:27  lr: 0.000001  loss: 3.7697 (3.5555)  time: 1.6797  data: 0.0004  max mem: 4563
+[2023-07-27 15:59:00 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1250/40032]  eta: 18:30:45  lr: 0.000001  loss: 3.6261 (3.5536)  time: 1.8343  data: 0.0004  max mem: 4563
+[2023-07-27 15:59:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1260/40032]  eta: 18:31:03  lr: 0.000001  loss: 3.5270 (3.5547)  time: 1.9286  data: 0.0004  max mem: 4563
+[2023-07-27 15:59:37 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1270/40032]  eta: 18:31:27  lr: 0.000001  loss: 3.7086 (3.5554)  time: 1.8430  data: 0.0004  max mem: 4563
+[2023-07-27 15:59:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1280/40032]  eta: 18:31:56  lr: 0.000001  loss: 3.7869 (3.5580)  time: 1.8634  data: 0.0005  max mem: 4563
+[2023-07-27 16:00:14 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1290/40032]  eta: 18:32:14  lr: 0.000001  loss: 3.9008 (3.5584)  time: 1.8562  data: 0.0004  max mem: 4563
+[2023-07-27 16:00:32 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1300/40032]  eta: 18:32:09  lr: 0.000001  loss: 3.7690 (3.5593)  time: 1.8004  data: 0.0004  max mem: 4563
+[2023-07-27 16:00:49 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1310/40032]  eta: 18:31:39  lr: 0.000001  loss: 3.6130 (3.5575)  time: 1.7214  data: 0.0004  max mem: 4563
+[2023-07-27 16:01:05 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1320/40032]  eta: 18:30:57  lr: 0.000001  loss: 3.1664 (3.5547)  time: 1.6589  data: 0.0004  max mem: 4563
+[2023-07-27 16:01:23 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1330/40032]  eta: 18:31:07  lr: 0.000001  loss: 3.2648 (3.5532)  time: 1.7263  data: 0.0004  max mem: 4563
+[2023-07-27 16:01:40 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1340/40032]  eta: 18:30:24  lr: 0.000001  loss: 3.4956 (3.5548)  time: 1.7251  data: 0.0005  max mem: 4563
+[2023-07-27 16:01:57 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1350/40032]  eta: 18:30:06  lr: 0.000001  loss: 3.5433 (3.5537)  time: 1.6763  data: 0.0005  max mem: 4563
+[2023-07-27 16:02:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1360/40032]  eta: 18:30:05  lr: 0.000001  loss: 3.5714 (3.5562)  time: 1.7485  data: 0.0005  max mem: 4563
+[2023-07-27 16:02:31 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1370/40032]  eta: 18:29:18  lr: 0.000001  loss: 3.8686 (3.5579)  time: 1.6990  data: 0.0004  max mem: 4563
+[2023-07-27 16:02:48 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1380/40032]  eta: 18:28:56  lr: 0.000001  loss: 3.8686 (3.5598)  time: 1.6608  data: 0.0004  max mem: 4563
+[2023-07-27 16:03:06 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1390/40032]  eta: 18:29:21  lr: 0.000001  loss: 3.8627 (3.5606)  time: 1.7889  data: 0.0004  max mem: 4563
+[2023-07-27 16:03:24 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1400/40032]  eta: 18:29:15  lr: 0.000001  loss: 3.8321 (3.5616)  time: 1.8185  data: 0.0004  max mem: 4563
+[2023-07-27 16:03:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1410/40032]  eta: 18:28:02  lr: 0.000001  loss: 3.9335 (3.5646)  time: 1.6407  data: 0.0004  max mem: 4563
+[2023-07-27 16:03:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1420/40032]  eta: 18:27:27  lr: 0.000001  loss: 3.8983 (3.5652)  time: 1.5866  data: 0.0003  max mem: 4563
+[2023-07-27 16:04:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1430/40032]  eta: 18:27:49  lr: 0.000001  loss: 3.7385 (3.5647)  time: 1.7612  data: 0.0004  max mem: 4563
+[2023-07-27 16:04:31 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1440/40032]  eta: 18:27:11  lr: 0.000001  loss: 3.4980 (3.5644)  time: 1.7551  data: 0.0004  max mem: 4563
+[2023-07-27 16:04:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1450/40032]  eta: 18:26:33  lr: 0.000001  loss: 3.4980 (3.5650)  time: 1.6440  data: 0.0004  max mem: 4563
+[2023-07-27 16:05:04 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1460/40032]  eta: 18:25:52  lr: 0.000001  loss: 3.7909 (3.5671)  time: 1.6373  data: 0.0003  max mem: 4563
+[2023-07-27 16:05:21 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1470/40032]  eta: 18:25:31  lr: 0.000001  loss: 3.7909 (3.5659)  time: 1.6674  data: 0.0004  max mem: 4563
+[2023-07-27 16:05:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1480/40032]  eta: 18:25:33  lr: 0.000001  loss: 3.6530 (3.5660)  time: 1.7512  data: 0.0004  max mem: 4563
+[2023-07-27 16:05:55 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1490/40032]  eta: 18:24:42  lr: 0.000001  loss: 3.2799 (3.5619)  time: 1.6917  data: 0.0004  max mem: 4563
+[2023-07-27 16:06:13 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1500/40032]  eta: 18:24:46  lr: 0.000001  loss: 3.3172 (3.5619)  time: 1.6957  data: 0.0004  max mem: 4563
+[2023-07-27 16:06:29 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1510/40032]  eta: 18:24:13  lr: 0.000001  loss: 3.7079 (3.5628)  time: 1.7305  data: 0.0004  max mem: 4563
+[2023-07-27 16:06:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1520/40032]  eta: 18:24:04  lr: 0.000001  loss: 3.8830 (3.5647)  time: 1.7057  data: 0.0004  max mem: 4563
+[2023-07-27 16:07:04 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1530/40032]  eta: 18:23:53  lr: 0.000001  loss: 3.6589 (3.5642)  time: 1.7493  data: 0.0004  max mem: 4563
+[2023-07-27 16:07:21 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1540/40032]  eta: 18:23:21  lr: 0.000001  loss: 3.6589 (3.5658)  time: 1.7023  data: 0.0005  max mem: 4563
+[2023-07-27 16:07:37 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1550/40032]  eta: 18:22:31  lr: 0.000001  loss: 3.7277 (3.5639)  time: 1.6234  data: 0.0005  max mem: 4563
+[2023-07-27 16:07:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1560/40032]  eta: 18:22:04  lr: 0.000001  loss: 3.1914 (3.5618)  time: 1.6341  data: 0.0004  max mem: 4563
+[2023-07-27 16:08:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1570/40032]  eta: 18:21:44  lr: 0.000001  loss: 3.0028 (3.5578)  time: 1.6934  data: 0.0004  max mem: 4563
+[2023-07-27 16:08:29 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1580/40032]  eta: 18:22:00  lr: 0.000001  loss: 3.0738 (3.5572)  time: 1.7812  data: 0.0004  max mem: 4563
+[2023-07-27 16:08:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1590/40032]  eta: 18:21:59  lr: 0.000001  loss: 3.6190 (3.5579)  time: 1.8218  data: 0.0004  max mem: 4563
+[2023-07-27 16:09:04 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1600/40032]  eta: 18:21:38  lr: 0.000001  loss: 3.7767 (3.5609)  time: 1.7436  data: 0.0004  max mem: 4563
+[2023-07-27 16:09:21 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1610/40032]  eta: 18:21:25  lr: 0.000001  loss: 3.8502 (3.5612)  time: 1.7210  data: 0.0004  max mem: 4563
+[2023-07-27 16:09:38 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1620/40032]  eta: 18:20:53  lr: 0.000001  loss: 3.3257 (3.5593)  time: 1.6979  data: 0.0004  max mem: 4563
+[2023-07-27 16:09:55 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1630/40032]  eta: 18:20:34  lr: 0.000001  loss: 3.4866 (3.5597)  time: 1.6848  data: 0.0004  max mem: 4563
+[2023-07-27 16:10:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1640/40032]  eta: 18:19:51  lr: 0.000001  loss: 3.6813 (3.5605)  time: 1.6608  data: 0.0004  max mem: 4563
+[2023-07-27 16:10:27 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1650/40032]  eta: 18:18:51  lr: 0.000001  loss: 3.4880 (3.5571)  time: 1.5701  data: 0.0004  max mem: 4563
+[2023-07-27 16:10:45 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1660/40032]  eta: 18:19:09  lr: 0.000001  loss: 3.3565 (3.5566)  time: 1.7024  data: 0.0004  max mem: 4563
+[2023-07-27 16:11:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1670/40032]  eta: 18:18:55  lr: 0.000001  loss: 3.3994 (3.5566)  time: 1.8030  data: 0.0004  max mem: 4563
+[2023-07-27 16:11:18 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1680/40032]  eta: 18:18:00  lr: 0.000001  loss: 3.6318 (3.5568)  time: 1.6436  data: 0.0004  max mem: 4563
+[2023-07-27 16:11:36 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1690/40032]  eta: 18:18:04  lr: 0.000001  loss: 3.6035 (3.5569)  time: 1.6814  data: 0.0004  max mem: 4563
+[2023-07-27 16:11:53 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1700/40032]  eta: 18:17:33  lr: 0.000001  loss: 3.7689 (3.5596)  time: 1.7336  data: 0.0004  max mem: 4563
+[2023-07-27 16:12:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1710/40032]  eta: 18:17:42  lr: 0.000001  loss: 3.7210 (3.5583)  time: 1.7460  data: 0.0004  max mem: 4563
+[2023-07-27 16:12:26 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1720/40032]  eta: 18:16:34  lr: 0.000001  loss: 3.4026 (3.5580)  time: 1.6634  data: 0.0004  max mem: 4563
+[2023-07-27 16:12:43 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1730/40032]  eta: 18:16:13  lr: 0.000001  loss: 3.4218 (3.5591)  time: 1.5940  data: 0.0003  max mem: 4563
+[2023-07-27 16:13:00 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1740/40032]  eta: 18:15:59  lr: 0.000001  loss: 3.4195 (3.5569)  time: 1.7148  data: 0.0004  max mem: 4563
+[2023-07-27 16:13:17 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1750/40032]  eta: 18:15:39  lr: 0.000001  loss: 3.0660 (3.5564)  time: 1.7199  data: 0.0004  max mem: 4563
+[2023-07-27 16:13:32 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1760/40032]  eta: 18:14:34  lr: 0.000001  loss: 3.0660 (3.5559)  time: 1.6012  data: 0.0004  max mem: 4563
+[2023-07-27 16:13:50 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1770/40032]  eta: 18:14:22  lr: 0.000001  loss: 3.2801 (3.5547)  time: 1.6185  data: 0.0004  max mem: 4563
+[2023-07-27 16:14:07 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1780/40032]  eta: 18:14:07  lr: 0.000001  loss: 3.4110 (3.5557)  time: 1.7337  data: 0.0004  max mem: 4563
+[2023-07-27 16:14:22 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1790/40032]  eta: 18:12:54  lr: 0.000001  loss: 3.9636 (3.5547)  time: 1.5896  data: 0.0003  max mem: 4563
+[2023-07-27 16:14:38 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1800/40032]  eta: 18:12:20  lr: 0.000001  loss: 3.7995 (3.5563)  time: 1.5430  data: 0.0004  max mem: 4563
+[2023-07-27 16:14:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1810/40032]  eta: 18:12:18  lr: 0.000001  loss: 3.7541 (3.5556)  time: 1.7117  data: 0.0004  max mem: 4563
+[2023-07-27 16:15:14 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1820/40032]  eta: 18:12:21  lr: 0.000001  loss: 3.7233 (3.5569)  time: 1.7996  data: 0.0004  max mem: 4563
+[2023-07-27 16:15:32 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1830/40032]  eta: 18:12:20  lr: 0.000001  loss: 3.7667 (3.5571)  time: 1.8010  data: 0.0003  max mem: 4563
+[2023-07-27 16:15:48 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1840/40032]  eta: 18:11:49  lr: 0.000001  loss: 3.4822 (3.5563)  time: 1.7211  data: 0.0003  max mem: 4563
+[2023-07-27 16:16:04 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1850/40032]  eta: 18:11:03  lr: 0.000001  loss: 3.2761 (3.5551)  time: 1.6116  data: 0.0004  max mem: 4563
+[2023-07-27 16:16:21 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1860/40032]  eta: 18:10:41  lr: 0.000001  loss: 3.3728 (3.5549)  time: 1.6317  data: 0.0004  max mem: 4563
+[2023-07-27 16:16:38 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1870/40032]  eta: 18:10:15  lr: 0.000001  loss: 3.3728 (3.5525)  time: 1.6805  data: 0.0003  max mem: 4563
+[2023-07-27 16:16:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1880/40032]  eta: 18:09:41  lr: 0.000001  loss: 3.5242 (3.5543)  time: 1.6520  data: 0.0004  max mem: 4563
+[2023-07-27 16:17:12 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1890/40032]  eta: 18:09:41  lr: 0.000001  loss: 3.6984 (3.5537)  time: 1.7160  data: 0.0004  max mem: 4563
+[2023-07-27 16:17:28 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1900/40032]  eta: 18:09:00  lr: 0.000001  loss: 3.4502 (3.5527)  time: 1.6963  data: 0.0004  max mem: 4563
+[2023-07-27 16:17:46 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1910/40032]  eta: 18:08:56  lr: 0.000001  loss: 3.4611 (3.5534)  time: 1.6879  data: 0.0004  max mem: 4563
+[2023-07-27 16:18:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1920/40032]  eta: 18:08:35  lr: 0.000001  loss: 3.4507 (3.5514)  time: 1.7363  data: 0.0004  max mem: 4563
+[2023-07-27 16:18:18 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1930/40032]  eta: 18:07:33  lr: 0.000001  loss: 3.1725 (3.5502)  time: 1.5891  data: 0.0004  max mem: 4563
+[2023-07-27 16:18:35 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1940/40032]  eta: 18:07:21  lr: 0.000001  loss: 3.2362 (3.5483)  time: 1.6134  data: 0.0004  max mem: 4563
+[2023-07-27 16:18:52 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1950/40032]  eta: 18:07:01  lr: 0.000001  loss: 3.4524 (3.5476)  time: 1.7183  data: 0.0004  max mem: 4563
+[2023-07-27 16:19:09 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1960/40032]  eta: 18:06:40  lr: 0.000001  loss: 3.5429 (3.5472)  time: 1.6960  data: 0.0004  max mem: 4563
+[2023-07-27 16:19:26 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1970/40032]  eta: 18:06:24  lr: 0.000001  loss: 3.3325 (3.5453)  time: 1.7045  data: 0.0004  max mem: 4563
+[2023-07-27 16:19:44 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1980/40032]  eta: 18:06:20  lr: 0.000001  loss: 3.4268 (3.5454)  time: 1.7489  data: 0.0004  max mem: 4563
+[2023-07-27 16:20:01 DeiT] (utils.py 143): INFO Epoch: [0]  [ 1990/40032]  eta: 18:06:08  lr: 0.000001  loss: 3.8010 (3.5461)  time: 1.7622  data: 0.0004  max mem: 4563
+[2023-07-27 16:20:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2000/40032]  eta: 18:05:55  lr: 0.000001  loss: 3.7361 (3.5458)  time: 1.7385  data: 0.0004  max mem: 4563
+[2023-07-27 16:20:37 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2010/40032]  eta: 18:06:06  lr: 0.000001  loss: 3.7560 (3.5475)  time: 1.7977  data: 0.0004  max mem: 4563
+[2023-07-27 16:20:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2020/40032]  eta: 18:06:21  lr: 0.000001  loss: 3.5723 (3.5470)  time: 1.8730  data: 0.0004  max mem: 4563
+[2023-07-27 16:21:13 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2030/40032]  eta: 18:05:55  lr: 0.000001  loss: 3.4748 (3.5475)  time: 1.7757  data: 0.0005  max mem: 4563
+[2023-07-27 16:21:29 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2040/40032]  eta: 18:05:27  lr: 0.000001  loss: 3.4748 (3.5471)  time: 1.6601  data: 0.0004  max mem: 4563
+[2023-07-27 16:21:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2050/40032]  eta: 18:05:10  lr: 0.000001  loss: 3.4668 (3.5475)  time: 1.6857  data: 0.0004  max mem: 4563
+[2023-07-27 16:22:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2060/40032]  eta: 18:04:43  lr: 0.000001  loss: 3.6621 (3.5475)  time: 1.6898  data: 0.0004  max mem: 4563
+[2023-07-27 16:22:18 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2070/40032]  eta: 18:03:52  lr: 0.000001  loss: 3.4545 (3.5474)  time: 1.5946  data: 0.0003  max mem: 4563
+[2023-07-27 16:22:36 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2080/40032]  eta: 18:03:45  lr: 0.000001  loss: 3.6164 (3.5478)  time: 1.6487  data: 0.0003  max mem: 4563
+[2023-07-27 16:22:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2090/40032]  eta: 18:03:42  lr: 0.000001  loss: 3.7609 (3.5490)  time: 1.7800  data: 0.0004  max mem: 4563
+[2023-07-27 16:23:13 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2100/40032]  eta: 18:03:52  lr: 0.000001  loss: 3.6567 (3.5478)  time: 1.8277  data: 0.0004  max mem: 4563
+[2023-07-27 16:23:29 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2110/40032]  eta: 18:03:22  lr: 0.000001  loss: 3.7814 (3.5492)  time: 1.7553  data: 0.0004  max mem: 4563
+[2023-07-27 16:23:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2120/40032]  eta: 18:03:17  lr: 0.000001  loss: 3.5125 (3.5487)  time: 1.7133  data: 0.0004  max mem: 4563
+[2023-07-27 16:24:06 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2130/40032]  eta: 18:03:30  lr: 0.000001  loss: 3.3926 (3.5487)  time: 1.8325  data: 0.0004  max mem: 4563
+[2023-07-27 16:24:22 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2140/40032]  eta: 18:02:50  lr: 0.000001  loss: 3.6805 (3.5493)  time: 1.7336  data: 0.0004  max mem: 4563
+[2023-07-27 16:24:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2150/40032]  eta: 18:02:43  lr: 0.000001  loss: 3.6296 (3.5488)  time: 1.6790  data: 0.0004  max mem: 4563
+[2023-07-27 16:24:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2160/40032]  eta: 18:02:22  lr: 0.000001  loss: 3.6671 (3.5503)  time: 1.7333  data: 0.0003  max mem: 4563
+[2023-07-27 16:25:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2170/40032]  eta: 18:01:22  lr: 0.000001  loss: 3.7468 (3.5519)  time: 1.5809  data: 0.0004  max mem: 4563
+[2023-07-27 16:25:29 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2180/40032]  eta: 18:01:17  lr: 0.000001  loss: 3.4661 (3.5505)  time: 1.6263  data: 0.0004  max mem: 4563
+[2023-07-27 16:25:45 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2190/40032]  eta: 18:00:45  lr: 0.000001  loss: 3.4321 (3.5522)  time: 1.7045  data: 0.0004  max mem: 4563
+[2023-07-27 16:26:01 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2200/40032]  eta: 18:00:08  lr: 0.000001  loss: 3.3790 (3.5506)  time: 1.6117  data: 0.0004  max mem: 4563
+[2023-07-27 16:26:17 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2210/40032]  eta: 17:59:24  lr: 0.000001  loss: 3.1574 (3.5500)  time: 1.5781  data: 0.0004  max mem: 4563
+[2023-07-27 16:26:33 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2220/40032]  eta: 17:59:02  lr: 0.000001  loss: 3.3898 (3.5490)  time: 1.6194  data: 0.0004  max mem: 4563
+[2023-07-27 16:26:50 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2230/40032]  eta: 17:58:34  lr: 0.000001  loss: 3.2270 (3.5473)  time: 1.6651  data: 0.0004  max mem: 4563
+[2023-07-27 16:27:07 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2240/40032]  eta: 17:58:13  lr: 0.000001  loss: 3.2270 (3.5465)  time: 1.6695  data: 0.0004  max mem: 4563
+[2023-07-27 16:27:24 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2250/40032]  eta: 17:58:03  lr: 0.000001  loss: 3.2702 (3.5448)  time: 1.7208  data: 0.0004  max mem: 4563
+[2023-07-27 16:27:40 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2260/40032]  eta: 17:57:16  lr: 0.000001  loss: 3.2483 (3.5450)  time: 1.6426  data: 0.0003  max mem: 4563
+[2023-07-27 16:27:57 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2270/40032]  eta: 17:56:54  lr: 0.000001  loss: 3.7041 (3.5461)  time: 1.6084  data: 0.0004  max mem: 4563
+[2023-07-27 16:28:13 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2280/40032]  eta: 17:56:26  lr: 0.000001  loss: 3.5684 (3.5458)  time: 1.6651  data: 0.0003  max mem: 4563
+[2023-07-27 16:28:30 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2290/40032]  eta: 17:56:08  lr: 0.000001  loss: 3.5203 (3.5463)  time: 1.6766  data: 0.0003  max mem: 4563
+[2023-07-27 16:28:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2300/40032]  eta: 17:55:51  lr: 0.000001  loss: 3.2942 (3.5451)  time: 1.7093  data: 0.0003  max mem: 4563
+[2023-07-27 16:29:04 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2310/40032]  eta: 17:55:26  lr: 0.000001  loss: 3.1304 (3.5448)  time: 1.6867  data: 0.0004  max mem: 4563
+[2023-07-27 16:29:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2320/40032]  eta: 17:54:35  lr: 0.000001  loss: 3.6412 (3.5453)  time: 1.5814  data: 0.0004  max mem: 4563
+[2023-07-27 16:29:35 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2330/40032]  eta: 17:53:57  lr: 0.000001  loss: 3.8372 (3.5465)  time: 1.5412  data: 0.0004  max mem: 4563
+[2023-07-27 16:29:51 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2340/40032]  eta: 17:53:29  lr: 0.000001  loss: 3.7816 (3.5471)  time: 1.6117  data: 0.0004  max mem: 4563
+[2023-07-27 16:30:09 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2350/40032]  eta: 17:53:25  lr: 0.000001  loss: 3.6058 (3.5477)  time: 1.7143  data: 0.0003  max mem: 4563
+[2023-07-27 16:30:26 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2360/40032]  eta: 17:53:06  lr: 0.000001  loss: 3.5749 (3.5477)  time: 1.7420  data: 0.0003  max mem: 4563
+[2023-07-27 16:30:45 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2370/40032]  eta: 17:53:13  lr: 0.000001  loss: 3.5315 (3.5482)  time: 1.7802  data: 0.0004  max mem: 4563
+[2023-07-27 16:31:01 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2380/40032]  eta: 17:52:43  lr: 0.000001  loss: 3.5315 (3.5484)  time: 1.7451  data: 0.0004  max mem: 4563
+[2023-07-27 16:31:18 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2390/40032]  eta: 17:52:19  lr: 0.000001  loss: 3.4847 (3.5475)  time: 1.6474  data: 0.0004  max mem: 4563
+[2023-07-27 16:31:35 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2400/40032]  eta: 17:52:04  lr: 0.000001  loss: 3.5513 (3.5478)  time: 1.6938  data: 0.0004  max mem: 4563
+[2023-07-27 16:31:52 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2410/40032]  eta: 17:51:46  lr: 0.000001  loss: 3.7748 (3.5494)  time: 1.7137  data: 0.0004  max mem: 4563
+[2023-07-27 16:32:10 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2420/40032]  eta: 17:51:43  lr: 0.000001  loss: 3.4730 (3.5483)  time: 1.7511  data: 0.0004  max mem: 4563
+[2023-07-27 16:32:26 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2430/40032]  eta: 17:51:10  lr: 0.000001  loss: 3.4707 (3.5485)  time: 1.7025  data: 0.0004  max mem: 4563
+[2023-07-27 16:32:42 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2440/40032]  eta: 17:50:46  lr: 0.000001  loss: 3.7384 (3.5490)  time: 1.6361  data: 0.0004  max mem: 4563
+[2023-07-27 16:33:00 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2450/40032]  eta: 17:50:29  lr: 0.000001  loss: 3.4820 (3.5492)  time: 1.6875  data: 0.0004  max mem: 4563
+[2023-07-27 16:33:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2460/40032]  eta: 17:49:51  lr: 0.000001  loss: 3.6324 (3.5495)  time: 1.6411  data: 0.0004  max mem: 4563
+[2023-07-27 16:33:34 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2470/40032]  eta: 17:49:55  lr: 0.000001  loss: 3.6284 (3.5489)  time: 1.7092  data: 0.0004  max mem: 4563
+[2023-07-27 16:33:49 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2480/40032]  eta: 17:49:12  lr: 0.000001  loss: 3.3479 (3.5476)  time: 1.6947  data: 0.0004  max mem: 4563
+[2023-07-27 16:34:07 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2490/40032]  eta: 17:48:59  lr: 0.000001  loss: 3.3607 (3.5477)  time: 1.6374  data: 0.0004  max mem: 4563
+[2023-07-27 16:34:21 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2500/40032]  eta: 17:48:10  lr: 0.000001  loss: 3.5396 (3.5479)  time: 1.6136  data: 0.0004  max mem: 4563
+[2023-07-27 16:34:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2510/40032]  eta: 17:48:02  lr: 0.000001  loss: 3.5371 (3.5464)  time: 1.6319  data: 0.0004  max mem: 4563
+[2023-07-27 16:34:57 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2520/40032]  eta: 17:47:53  lr: 0.000001  loss: 3.5371 (3.5468)  time: 1.7642  data: 0.0004  max mem: 4563
+[2023-07-27 16:35:14 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2530/40032]  eta: 17:47:32  lr: 0.000001  loss: 3.7480 (3.5478)  time: 1.7202  data: 0.0004  max mem: 4563
+[2023-07-27 16:35:31 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2540/40032]  eta: 17:47:13  lr: 0.000001  loss: 3.7480 (3.5475)  time: 1.6900  data: 0.0004  max mem: 4563
+[2023-07-27 16:35:48 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2550/40032]  eta: 17:47:06  lr: 0.000001  loss: 3.6614 (3.5477)  time: 1.7378  data: 0.0004  max mem: 4563
+[2023-07-27 16:36:05 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2560/40032]  eta: 17:46:42  lr: 0.000001  loss: 3.7799 (3.5496)  time: 1.7199  data: 0.0004  max mem: 4563
+[2023-07-27 16:36:23 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2570/40032]  eta: 17:46:42  lr: 0.000001  loss: 3.8753 (3.5496)  time: 1.7400  data: 0.0004  max mem: 4563
+[2023-07-27 16:36:40 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2580/40032]  eta: 17:46:19  lr: 0.000001  loss: 3.4146 (3.5491)  time: 1.7438  data: 0.0004  max mem: 4563
+[2023-07-27 16:36:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2590/40032]  eta: 17:45:49  lr: 0.000001  loss: 3.4146 (3.5494)  time: 1.6451  data: 0.0003  max mem: 4563
+[2023-07-27 16:37:13 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2600/40032]  eta: 17:45:37  lr: 0.000001  loss: 3.5259 (3.5494)  time: 1.6807  data: 0.0003  max mem: 4563
+[2023-07-27 16:37:30 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2610/40032]  eta: 17:45:08  lr: 0.000001  loss: 3.0932 (3.5474)  time: 1.6829  data: 0.0003  max mem: 4563
+[2023-07-27 16:37:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2620/40032]  eta: 17:44:53  lr: 0.000001  loss: 3.2060 (3.5475)  time: 1.6739  data: 0.0003  max mem: 4563
+[2023-07-27 16:38:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2630/40032]  eta: 17:44:22  lr: 0.000001  loss: 3.6588 (3.5483)  time: 1.6687  data: 0.0003  max mem: 4563
+[2023-07-27 16:38:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2640/40032]  eta: 17:43:51  lr: 0.000001  loss: 3.8028 (3.5495)  time: 1.6104  data: 0.0003  max mem: 4563
+[2023-07-27 16:38:36 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2650/40032]  eta: 17:43:25  lr: 0.000001  loss: 3.8028 (3.5499)  time: 1.6259  data: 0.0004  max mem: 4563
+[2023-07-27 16:38:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2660/40032]  eta: 17:43:24  lr: 0.000001  loss: 3.7089 (3.5500)  time: 1.7342  data: 0.0004  max mem: 4563
+[2023-07-27 16:39:10 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2670/40032]  eta: 17:42:57  lr: 0.000001  loss: 3.7089 (3.5508)  time: 1.7273  data: 0.0004  max mem: 4563
+[2023-07-27 16:39:27 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2680/40032]  eta: 17:42:38  lr: 0.000001  loss: 3.7521 (3.5514)  time: 1.6639  data: 0.0004  max mem: 4563
+[2023-07-27 16:39:43 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2690/40032]  eta: 17:42:03  lr: 0.000001  loss: 3.9662 (3.5526)  time: 1.6361  data: 0.0004  max mem: 4563
+[2023-07-27 16:40:00 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2700/40032]  eta: 17:41:46  lr: 0.000001  loss: 3.8217 (3.5539)  time: 1.6424  data: 0.0004  max mem: 4563
+[2023-07-27 16:40:18 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2710/40032]  eta: 17:41:40  lr: 0.000001  loss: 3.8170 (3.5550)  time: 1.7465  data: 0.0004  max mem: 4563
+[2023-07-27 16:40:36 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2720/40032]  eta: 17:41:40  lr: 0.000001  loss: 3.6315 (3.5544)  time: 1.8075  data: 0.0004  max mem: 4563
+[2023-07-27 16:40:53 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2730/40032]  eta: 17:41:15  lr: 0.000001  loss: 3.4292 (3.5548)  time: 1.7397  data: 0.0004  max mem: 4563
+[2023-07-27 16:41:09 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2740/40032]  eta: 17:40:50  lr: 0.000001  loss: 3.3599 (3.5534)  time: 1.6502  data: 0.0004  max mem: 4563
+[2023-07-27 16:41:25 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2750/40032]  eta: 17:40:23  lr: 0.000001  loss: 3.4710 (3.5536)  time: 1.6434  data: 0.0004  max mem: 4563
+[2023-07-27 16:41:44 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2760/40032]  eta: 17:40:29  lr: 0.000001  loss: 3.5886 (3.5531)  time: 1.7567  data: 0.0004  max mem: 4563
+[2023-07-27 16:42:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2770/40032]  eta: 17:40:28  lr: 0.000001  loss: 3.6459 (3.5539)  time: 1.8515  data: 0.0005  max mem: 4563
+[2023-07-27 16:42:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2780/40032]  eta: 17:40:02  lr: 0.000001  loss: 3.5149 (3.5535)  time: 1.7337  data: 0.0004  max mem: 4563
+[2023-07-27 16:42:35 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2790/40032]  eta: 17:39:36  lr: 0.000001  loss: 3.3545 (3.5534)  time: 1.6394  data: 0.0004  max mem: 4563
+[2023-07-27 16:42:52 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2800/40032]  eta: 17:39:17  lr: 0.000001  loss: 3.3721 (3.5533)  time: 1.6657  data: 0.0004  max mem: 4563
+[2023-07-27 16:43:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2810/40032]  eta: 17:39:25  lr: 0.000001  loss: 3.5211 (3.5531)  time: 1.7935  data: 0.0004  max mem: 4563
+[2023-07-27 16:43:28 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2820/40032]  eta: 17:39:08  lr: 0.000001  loss: 3.6702 (3.5535)  time: 1.8015  data: 0.0004  max mem: 4563
+[2023-07-27 16:43:44 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2830/40032]  eta: 17:38:36  lr: 0.000001  loss: 3.6702 (3.5533)  time: 1.6535  data: 0.0004  max mem: 4563
+[2023-07-27 16:44:01 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2840/40032]  eta: 17:38:16  lr: 0.000001  loss: 3.4785 (3.5533)  time: 1.6401  data: 0.0004  max mem: 4563
+[2023-07-27 16:44:17 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2850/40032]  eta: 17:37:43  lr: 0.000001  loss: 3.5969 (3.5532)  time: 1.6351  data: 0.0004  max mem: 4563
+[2023-07-27 16:44:34 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2860/40032]  eta: 17:37:24  lr: 0.000001  loss: 3.3225 (3.5519)  time: 1.6373  data: 0.0004  max mem: 4563
+[2023-07-27 16:44:52 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2870/40032]  eta: 17:37:18  lr: 0.000001  loss: 3.2856 (3.5515)  time: 1.7427  data: 0.0004  max mem: 4563
+[2023-07-27 16:45:07 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2880/40032]  eta: 17:36:32  lr: 0.000001  loss: 3.3277 (3.5509)  time: 1.6401  data: 0.0004  max mem: 4563
+[2023-07-27 16:45:22 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2890/40032]  eta: 17:35:58  lr: 0.000001  loss: 3.3029 (3.5501)  time: 1.5277  data: 0.0003  max mem: 4563
+[2023-07-27 16:45:37 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2900/40032]  eta: 17:35:05  lr: 0.000001  loss: 3.3920 (3.5504)  time: 1.4972  data: 0.0004  max mem: 4563
+[2023-07-27 16:45:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2910/40032]  eta: 17:34:47  lr: 0.000001  loss: 3.3920 (3.5491)  time: 1.5587  data: 0.0004  max mem: 4563
+[2023-07-27 16:46:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2920/40032]  eta: 17:34:32  lr: 0.000001  loss: 3.2848 (3.5488)  time: 1.7103  data: 0.0003  max mem: 4563
+[2023-07-27 16:46:27 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2930/40032]  eta: 17:34:09  lr: 0.000001  loss: 3.7313 (3.5497)  time: 1.6897  data: 0.0003  max mem: 4563
+[2023-07-27 16:46:44 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2940/40032]  eta: 17:33:49  lr: 0.000001  loss: 3.9423 (3.5514)  time: 1.6711  data: 0.0004  max mem: 4563
+[2023-07-27 16:47:02 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2950/40032]  eta: 17:33:41  lr: 0.000001  loss: 3.9060 (3.5505)  time: 1.7304  data: 0.0004  max mem: 4563
+[2023-07-27 16:47:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2960/40032]  eta: 17:33:18  lr: 0.000001  loss: 3.3210 (3.5499)  time: 1.7143  data: 0.0004  max mem: 4563
+[2023-07-27 16:47:34 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2970/40032]  eta: 17:32:39  lr: 0.000001  loss: 3.4964 (3.5499)  time: 1.5931  data: 0.0004  max mem: 4563
+[2023-07-27 16:47:49 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2980/40032]  eta: 17:31:57  lr: 0.000001  loss: 3.4964 (3.5502)  time: 1.5166  data: 0.0004  max mem: 4563
+[2023-07-27 16:48:05 DeiT] (utils.py 143): INFO Epoch: [0]  [ 2990/40032]  eta: 17:31:31  lr: 0.000001  loss: 3.5753 (3.5503)  time: 1.5682  data: 0.0004  max mem: 4563
+[2023-07-27 16:48:23 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3000/40032]  eta: 17:31:19  lr: 0.000001  loss: 3.8616 (3.5510)  time: 1.6878  data: 0.0003  max mem: 4563
+[2023-07-27 16:48:38 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3010/40032]  eta: 17:30:35  lr: 0.000001  loss: 3.3939 (3.5506)  time: 1.6149  data: 0.0003  max mem: 4563
+[2023-07-27 16:48:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3020/40032]  eta: 17:30:17  lr: 0.000001  loss: 3.4901 (3.5507)  time: 1.5894  data: 0.0004  max mem: 4563
+[2023-07-27 16:49:10 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3030/40032]  eta: 17:29:46  lr: 0.000001  loss: 3.5195 (3.5505)  time: 1.6412  data: 0.0004  max mem: 4563
+[2023-07-27 16:49:25 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3040/40032]  eta: 17:28:59  lr: 0.000001  loss: 3.5244 (3.5514)  time: 1.5223  data: 0.0004  max mem: 4563
+[2023-07-27 16:49:40 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3050/40032]  eta: 17:28:21  lr: 0.000001  loss: 3.9492 (3.5521)  time: 1.4898  data: 0.0004  max mem: 4563
+[2023-07-27 16:49:57 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3060/40032]  eta: 17:27:56  lr: 0.000001  loss: 3.7311 (3.5521)  time: 1.5831  data: 0.0004  max mem: 4563
+[2023-07-27 16:50:14 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3070/40032]  eta: 17:27:49  lr: 0.000001  loss: 3.5684 (3.5520)  time: 1.7115  data: 0.0004  max mem: 4563
+[2023-07-27 16:50:31 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3080/40032]  eta: 17:27:31  lr: 0.000001  loss: 3.5194 (3.5513)  time: 1.7378  data: 0.0003  max mem: 4563
+[2023-07-27 16:50:48 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3090/40032]  eta: 17:27:08  lr: 0.000001  loss: 3.4359 (3.5507)  time: 1.6723  data: 0.0003  max mem: 4563
+[2023-07-27 16:51:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3100/40032]  eta: 17:26:25  lr: 0.000001  loss: 3.5248 (3.5517)  time: 1.5659  data: 0.0004  max mem: 4563
+[2023-07-27 16:51:20 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3110/40032]  eta: 17:26:07  lr: 0.000001  loss: 3.5644 (3.5513)  time: 1.5854  data: 0.0004  max mem: 4563
+[2023-07-27 16:51:37 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3120/40032]  eta: 17:25:55  lr: 0.000001  loss: 3.8828 (3.5520)  time: 1.7182  data: 0.0004  max mem: 4563
+[2023-07-27 16:51:55 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3130/40032]  eta: 17:25:47  lr: 0.000001  loss: 3.7320 (3.5520)  time: 1.7611  data: 0.0003  max mem: 4563
+[2023-07-27 16:52:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3140/40032]  eta: 17:25:21  lr: 0.000001  loss: 3.4384 (3.5514)  time: 1.6996  data: 0.0004  max mem: 4563
+[2023-07-27 16:52:26 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3150/40032]  eta: 17:24:46  lr: 0.000001  loss: 3.4867 (3.5512)  time: 1.5848  data: 0.0004  max mem: 4563
+[2023-07-27 16:52:44 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3160/40032]  eta: 17:24:41  lr: 0.000001  loss: 3.6119 (3.5514)  time: 1.6729  data: 0.0003  max mem: 4563
+[2023-07-27 16:53:02 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3170/40032]  eta: 17:24:30  lr: 0.000001  loss: 3.5945 (3.5514)  time: 1.7748  data: 0.0003  max mem: 4563
+[2023-07-27 16:53:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3180/40032]  eta: 17:24:12  lr: 0.000001  loss: 3.5945 (3.5511)  time: 1.7202  data: 0.0003  max mem: 4563
+[2023-07-27 16:53:35 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3190/40032]  eta: 17:23:47  lr: 0.000001  loss: 3.4834 (3.5503)  time: 1.6629  data: 0.0004  max mem: 4563
+[2023-07-27 16:53:51 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3200/40032]  eta: 17:23:14  lr: 0.000001  loss: 3.4834 (3.5504)  time: 1.5973  data: 0.0004  max mem: 4563
+[2023-07-27 16:54:06 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3210/40032]  eta: 17:22:42  lr: 0.000001  loss: 3.6088 (3.5508)  time: 1.5626  data: 0.0004  max mem: 4563
+[2023-07-27 16:54:22 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3220/40032]  eta: 17:22:05  lr: 0.000001  loss: 3.7754 (3.5513)  time: 1.5489  data: 0.0004  max mem: 4563
+[2023-07-27 16:54:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3230/40032]  eta: 17:21:55  lr: 0.000001  loss: 3.6514 (3.5517)  time: 1.6425  data: 0.0004  max mem: 4563
+[2023-07-27 16:54:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3240/40032]  eta: 17:21:37  lr: 0.000001  loss: 3.7553 (3.5530)  time: 1.7227  data: 0.0004  max mem: 4563
+[2023-07-27 16:55:14 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3250/40032]  eta: 17:21:24  lr: 0.000001  loss: 3.4980 (3.5523)  time: 1.7121  data: 0.0004  max mem: 4563
+[2023-07-27 16:55:30 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3260/40032]  eta: 17:21:05  lr: 0.000001  loss: 3.3599 (3.5526)  time: 1.7060  data: 0.0004  max mem: 4563
+[2023-07-27 16:55:48 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3270/40032]  eta: 17:20:52  lr: 0.000001  loss: 3.3599 (3.5519)  time: 1.7096  data: 0.0003  max mem: 4563
+[2023-07-27 16:56:06 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3280/40032]  eta: 17:20:53  lr: 0.000001  loss: 3.3728 (3.5520)  time: 1.7974  data: 0.0003  max mem: 4563
+[2023-07-27 16:56:22 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3290/40032]  eta: 17:20:21  lr: 0.000001  loss: 3.5607 (3.5523)  time: 1.7087  data: 0.0003  max mem: 4563
+[2023-07-27 16:56:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3300/40032]  eta: 17:20:06  lr: 0.000001  loss: 3.5804 (3.5524)  time: 1.6396  data: 0.0004  max mem: 4563
+[2023-07-27 16:56:56 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3310/40032]  eta: 17:19:47  lr: 0.000001  loss: 3.6868 (3.5526)  time: 1.6990  data: 0.0004  max mem: 4563
+[2023-07-27 16:57:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3320/40032]  eta: 17:19:11  lr: 0.000001  loss: 3.6868 (3.5525)  time: 1.6054  data: 0.0004  max mem: 4563
+[2023-07-27 16:57:28 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3330/40032]  eta: 17:18:49  lr: 0.000001  loss: 3.3515 (3.5519)  time: 1.5924  data: 0.0004  max mem: 4563
+[2023-07-27 16:57:45 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3340/40032]  eta: 17:18:35  lr: 0.000001  loss: 3.3280 (3.5510)  time: 1.6881  data: 0.0004  max mem: 4563
+[2023-07-27 16:58:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3350/40032]  eta: 17:18:26  lr: 0.000001  loss: 3.5577 (3.5512)  time: 1.7465  data: 0.0003  max mem: 4563
+[2023-07-27 16:58:20 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3360/40032]  eta: 17:18:12  lr: 0.000001  loss: 3.5577 (3.5512)  time: 1.7522  data: 0.0003  max mem: 4563
+[2023-07-27 16:58:38 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3370/40032]  eta: 17:18:01  lr: 0.000001  loss: 3.5911 (3.5511)  time: 1.7391  data: 0.0003  max mem: 4563
+[2023-07-27 16:58:55 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3380/40032]  eta: 17:17:51  lr: 0.000001  loss: 3.6712 (3.5509)  time: 1.7578  data: 0.0003  max mem: 4563
+[2023-07-27 16:59:12 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3390/40032]  eta: 17:17:27  lr: 0.000001  loss: 3.7529 (3.5513)  time: 1.7007  data: 0.0003  max mem: 4563
+[2023-07-27 16:59:31 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3400/40032]  eta: 17:17:34  lr: 0.000001  loss: 3.7477 (3.5512)  time: 1.7776  data: 0.0004  max mem: 4563
+[2023-07-27 16:59:47 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3410/40032]  eta: 17:17:06  lr: 0.000001  loss: 3.9032 (3.5523)  time: 1.7600  data: 0.0004  max mem: 4563
+[2023-07-27 17:00:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3420/40032]  eta: 17:16:38  lr: 0.000001  loss: 3.6500 (3.5519)  time: 1.5941  data: 0.0004  max mem: 4563
+[2023-07-27 17:00:20 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3430/40032]  eta: 17:16:23  lr: 0.000001  loss: 3.3122 (3.5509)  time: 1.6543  data: 0.0004  max mem: 4563
+[2023-07-27 17:00:36 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3440/40032]  eta: 17:15:57  lr: 0.000001  loss: 3.2066 (3.5502)  time: 1.6686  data: 0.0004  max mem: 4563
+[2023-07-27 17:00:53 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3450/40032]  eta: 17:15:43  lr: 0.000001  loss: 3.4287 (3.5502)  time: 1.6709  data: 0.0004  max mem: 4563
+[2023-07-27 17:01:09 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3460/40032]  eta: 17:15:15  lr: 0.000001  loss: 3.7224 (3.5508)  time: 1.6605  data: 0.0003  max mem: 4563
+[2023-07-27 17:01:26 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3470/40032]  eta: 17:14:58  lr: 0.000001  loss: 3.6466 (3.5503)  time: 1.6471  data: 0.0003  max mem: 4563
+[2023-07-27 17:01:45 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3480/40032]  eta: 17:14:57  lr: 0.000001  loss: 3.5865 (3.5506)  time: 1.7710  data: 0.0004  max mem: 4563
+[2023-07-27 17:02:02 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3490/40032]  eta: 17:14:40  lr: 0.000001  loss: 3.3517 (3.5505)  time: 1.7756  data: 0.0004  max mem: 4563
+[2023-07-27 17:02:20 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3500/40032]  eta: 17:14:34  lr: 0.000001  loss: 3.3907 (3.5498)  time: 1.7554  data: 0.0004  max mem: 4563
+[2023-07-27 17:02:37 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3510/40032]  eta: 17:14:20  lr: 0.000001  loss: 3.6816 (3.5501)  time: 1.7647  data: 0.0004  max mem: 4563
+[2023-07-27 17:02:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3520/40032]  eta: 17:14:00  lr: 0.000001  loss: 3.6743 (3.5500)  time: 1.6964  data: 0.0004  max mem: 4563
+[2023-07-27 17:03:10 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3530/40032]  eta: 17:13:38  lr: 0.000001  loss: 3.6797 (3.5502)  time: 1.6627  data: 0.0004  max mem: 4563
+[2023-07-27 17:03:28 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3540/40032]  eta: 17:13:26  lr: 0.000001  loss: 3.3300 (3.5495)  time: 1.6979  data: 0.0004  max mem: 4563
+[2023-07-27 17:03:45 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3550/40032]  eta: 17:13:15  lr: 0.000001  loss: 3.3300 (3.5493)  time: 1.7531  data: 0.0005  max mem: 4563
+[2023-07-27 17:04:02 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3560/40032]  eta: 17:12:54  lr: 0.000001  loss: 3.5450 (3.5499)  time: 1.7107  data: 0.0005  max mem: 4563
+[2023-07-27 17:04:20 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3570/40032]  eta: 17:12:48  lr: 0.000001  loss: 3.6895 (3.5501)  time: 1.7327  data: 0.0004  max mem: 4563
+[2023-07-27 17:04:37 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3580/40032]  eta: 17:12:31  lr: 0.000001  loss: 3.6895 (3.5510)  time: 1.7541  data: 0.0004  max mem: 4563
+[2023-07-27 17:04:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3590/40032]  eta: 17:12:19  lr: 0.000001  loss: 3.8414 (3.5514)  time: 1.7246  data: 0.0004  max mem: 4563
+[2023-07-27 17:05:12 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3600/40032]  eta: 17:12:11  lr: 0.000001  loss: 3.5847 (3.5512)  time: 1.7704  data: 0.0004  max mem: 4563
+[2023-07-27 17:05:29 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3610/40032]  eta: 17:11:47  lr: 0.000001  loss: 3.7403 (3.5519)  time: 1.7085  data: 0.0004  max mem: 4563
+[2023-07-27 17:05:46 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3620/40032]  eta: 17:11:33  lr: 0.000001  loss: 3.9942 (3.5530)  time: 1.6801  data: 0.0004  max mem: 4563
+[2023-07-27 17:06:05 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3630/40032]  eta: 17:11:36  lr: 0.000001  loss: 3.8238 (3.5531)  time: 1.8130  data: 0.0004  max mem: 4563
+[2023-07-27 17:06:22 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3640/40032]  eta: 17:11:19  lr: 0.000001  loss: 3.7663 (3.5533)  time: 1.7966  data: 0.0004  max mem: 4563
+[2023-07-27 17:06:41 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3650/40032]  eta: 17:11:18  lr: 0.000001  loss: 3.6986 (3.5541)  time: 1.7833  data: 0.0004  max mem: 4563
+[2023-07-27 17:06:59 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3660/40032]  eta: 17:11:13  lr: 0.000001  loss: 3.5330 (3.5536)  time: 1.8441  data: 0.0004  max mem: 4563
+[2023-07-27 17:07:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3670/40032]  eta: 17:10:51  lr: 0.000001  loss: 3.4634 (3.5539)  time: 1.7325  data: 0.0004  max mem: 4563
+[2023-07-27 17:07:32 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3680/40032]  eta: 17:10:31  lr: 0.000001  loss: 3.6246 (3.5537)  time: 1.6584  data: 0.0004  max mem: 4563
+[2023-07-27 17:07:49 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3690/40032]  eta: 17:10:15  lr: 0.000001  loss: 3.1887 (3.5539)  time: 1.6914  data: 0.0004  max mem: 4563
+[2023-07-27 17:08:05 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3700/40032]  eta: 17:09:51  lr: 0.000001  loss: 3.1887 (3.5533)  time: 1.6698  data: 0.0004  max mem: 4563
+[2023-07-27 17:08:23 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3710/40032]  eta: 17:09:37  lr: 0.000001  loss: 3.4442 (3.5533)  time: 1.6825  data: 0.0004  max mem: 4563
+[2023-07-27 17:08:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3720/40032]  eta: 17:09:12  lr: 0.000001  loss: 3.4442 (3.5530)  time: 1.6766  data: 0.0004  max mem: 4563
+[2023-07-27 17:08:58 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3730/40032]  eta: 17:09:14  lr: 0.000001  loss: 3.5163 (3.5533)  time: 1.7543  data: 0.0004  max mem: 4563
+[2023-07-27 17:09:16 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3740/40032]  eta: 17:09:06  lr: 0.000001  loss: 3.7965 (3.5539)  time: 1.8432  data: 0.0004  max mem: 4563
+[2023-07-27 17:09:32 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3750/40032]  eta: 17:08:40  lr: 0.000001  loss: 3.7577 (3.5540)  time: 1.7020  data: 0.0004  max mem: 4563
+[2023-07-27 17:09:50 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3760/40032]  eta: 17:08:35  lr: 0.000001  loss: 3.5797 (3.5539)  time: 1.7166  data: 0.0004  max mem: 4563
+[2023-07-27 17:10:08 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3770/40032]  eta: 17:08:23  lr: 0.000001  loss: 3.6615 (3.5541)  time: 1.7902  data: 0.0003  max mem: 4563
+[2023-07-27 17:10:25 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3780/40032]  eta: 17:08:09  lr: 0.000001  loss: 3.5122 (3.5536)  time: 1.7454  data: 0.0003  max mem: 4563
+[2023-07-27 17:10:42 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3790/40032]  eta: 17:07:51  lr: 0.000001  loss: 3.5122 (3.5543)  time: 1.7149  data: 0.0004  max mem: 4563
+[2023-07-27 17:11:00 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3800/40032]  eta: 17:07:41  lr: 0.000001  loss: 3.8259 (3.5548)  time: 1.7342  data: 0.0004  max mem: 4563
+[2023-07-27 17:11:15 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3810/40032]  eta: 17:07:09  lr: 0.000001  loss: 3.6775 (3.5549)  time: 1.6597  data: 0.0004  max mem: 4563
+[2023-07-27 17:11:34 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3820/40032]  eta: 17:07:06  lr: 0.000001  loss: 3.4089 (3.5543)  time: 1.6962  data: 0.0004  max mem: 4563
+[2023-07-27 17:11:51 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3830/40032]  eta: 17:06:56  lr: 0.000001  loss: 3.4089 (3.5550)  time: 1.8096  data: 0.0004  max mem: 4563
+[2023-07-27 17:12:07 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3840/40032]  eta: 17:06:21  lr: 0.000001  loss: 3.6104 (3.5543)  time: 1.6423  data: 0.0004  max mem: 4563
+[2023-07-27 17:12:24 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3850/40032]  eta: 17:06:07  lr: 0.000001  loss: 3.4745 (3.5546)  time: 1.6244  data: 0.0004  max mem: 4563
+[2023-07-27 17:12:42 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3860/40032]  eta: 17:05:56  lr: 0.000001  loss: 3.3978 (3.5543)  time: 1.7522  data: 0.0005  max mem: 4563
+[2023-07-27 17:12:57 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3870/40032]  eta: 17:05:23  lr: 0.000001  loss: 3.3647 (3.5541)  time: 1.6467  data: 0.0004  max mem: 4563
+[2023-07-27 17:13:12 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3880/40032]  eta: 17:04:52  lr: 0.000001  loss: 3.5932 (3.5538)  time: 1.5398  data: 0.0004  max mem: 4563
+[2023-07-27 17:13:29 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3890/40032]  eta: 17:04:29  lr: 0.000001  loss: 3.6264 (3.5533)  time: 1.5941  data: 0.0004  max mem: 4563
+[2023-07-27 17:13:46 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3900/40032]  eta: 17:04:11  lr: 0.000001  loss: 3.4602 (3.5527)  time: 1.6625  data: 0.0004  max mem: 4563
+[2023-07-27 17:14:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3910/40032]  eta: 17:03:54  lr: 0.000001  loss: 3.4602 (3.5527)  time: 1.6983  data: 0.0004  max mem: 4563
+[2023-07-27 17:14:19 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3920/40032]  eta: 17:03:31  lr: 0.000001  loss: 3.5342 (3.5532)  time: 1.6690  data: 0.0003  max mem: 4563
+[2023-07-27 17:14:36 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3930/40032]  eta: 17:03:18  lr: 0.000001  loss: 3.4534 (3.5528)  time: 1.6882  data: 0.0004  max mem: 4563
+[2023-07-27 17:14:54 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3940/40032]  eta: 17:03:04  lr: 0.000001  loss: 3.3010 (3.5524)  time: 1.7360  data: 0.0004  max mem: 4563
+[2023-07-27 17:15:11 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3950/40032]  eta: 17:02:45  lr: 0.000001  loss: 3.1461 (3.5511)  time: 1.7049  data: 0.0004  max mem: 4563
+[2023-07-27 17:15:28 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3960/40032]  eta: 17:02:28  lr: 0.000001  loss: 3.3029 (3.5512)  time: 1.6927  data: 0.0004  max mem: 4563
+[2023-07-27 17:15:45 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3970/40032]  eta: 17:02:12  lr: 0.000001  loss: 3.7487 (3.5521)  time: 1.7047  data: 0.0004  max mem: 4563
+[2023-07-27 17:16:03 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3980/40032]  eta: 17:02:03  lr: 0.000001  loss: 3.5483 (3.5518)  time: 1.7514  data: 0.0004  max mem: 4563
+[2023-07-27 17:16:21 DeiT] (utils.py 143): INFO Epoch: [0]  [ 3990/40032]  eta: 17:01:59  lr: 0.000001  loss: 3.5307 (3.5519)  time: 1.8172  data: 0.0004  max mem: 4563
+[2023-07-27 17:16:39 DeiT] (utils.py 143): INFO Epoch: [0]  [ 4000/40032]  eta: 17:01:51  lr: 0.000001  loss: 3.5082 (3.5519)  time: 1.8193  data: 0.0004  max mem: 4563
+[2023-07-27 17:16:46 DeiT] (engine.py 94): INFO ----------pruning search setting----------
+layer: 1 2 
+percentage: 0.603 0.602 
+threshold: 0.0001 0.0001 
+
+[2023-07-27 17:16:46 DeiT] (pruners.py 545): INFO DNA_SIZE:1
+[2023-07-27 17:16:46 DeiT] (pruners.py 546): INFO POP_SIZE:100
+[2023-07-27 17:16:46 DeiT] (pruners.py 547): INFO N_KID:50
+[2023-07-27 17:16:46 DeiT] (pruners.py 548): INFO N_GENERATIONS:100
+[2023-07-27 17:16:46 DeiT] (pruners.py 549): INFO DNA_BOUND:[0, 1]
+[2023-07-27 17:16:46 DeiT] (pruners.py 562): INFO ------------protect layer 0 done----------------
+[2023-07-27 17:16:46 DeiT] (pruners.py 562): INFO ------------protect layer 1 done----------------
+[2023-07-27 17:16:46 DeiT] (pruners.py 562): INFO ------------protect layer 2 done----------------
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:0
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:1
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:3
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:4
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:5
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:6
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:7
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:8
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:9
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[1, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:10
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:11
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[2, 3]
+[2023-07-27 17:16:49 DeiT] (pruners.py 224): INFO ---------------pruning information---------
+[2023-07-27 17:16:49 DeiT] (pruners.py 225): INFO method:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 226): INFO pruning layer:0
+[2023-07-27 17:16:49 DeiT] (pruners.py 227): INFO pruned_neurons:3
+[2023-07-27 17:16:49 DeiT] (pruners.py 228): INFO pruning_iterations_done:1
+[2023-07-27 17:16:49 DeiT] (pruners.py 229): INFO neuron_units:33
+[2023-07-27 17:16:49 DeiT] (pruners.py 230): INFO all_neuron_units:36
+[2023-07-27 17:16:49 DeiT] (pruners.py 231): INFO threshold_now:[6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5, 6828163.5]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:0
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[62, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:1
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[65, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[0, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:3
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[2, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:4
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[7, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:5
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[4, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:6
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[16, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:7
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[112, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:8
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[135, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:9
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[346, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:10
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[542, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:11
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:730
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[537, 768]
+[2023-07-27 17:16:49 DeiT] (pruners.py 224): INFO ---------------pruning information---------
+[2023-07-27 17:16:49 DeiT] (pruners.py 225): INFO method:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 226): INFO pruning layer:1
+[2023-07-27 17:16:49 DeiT] (pruners.py 227): INFO pruned_neurons:1828
+[2023-07-27 17:16:49 DeiT] (pruners.py 228): INFO pruning_iterations_done:1
+[2023-07-27 17:16:49 DeiT] (pruners.py 229): INFO neuron_units:7388
+[2023-07-27 17:16:49 DeiT] (pruners.py 230): INFO all_neuron_units:9216
+[2023-07-27 17:16:49 DeiT] (pruners.py 231): INFO threshold_now:[42920.613, 42920.613, 42920.613, 42920.613, 42920.613, 42920.613, 42920.613, 42920.613, 42920.613, 42920.613, 42920.613, 42920.613]
+[2023-07-27 17:16:49 DeiT] (pruners.py 205): INFO 
+Layer:0
+[2023-07-27 17:16:49 DeiT] (pruners.py 206): INFO units:183
+[2023-07-27 17:16:49 DeiT] (pruners.py 217): INFO pruned_perc:[27, 192]
+[2023-07-27 17:16:49 DeiT] (pruners.py 224): INFO ---------------pruning information---------
+[2023-07-27 17:16:49 DeiT] (pruners.py 225): INFO method:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 226): INFO pruning layer:2
+[2023-07-27 17:16:49 DeiT] (pruners.py 227): INFO pruned_neurons:27
+[2023-07-27 17:16:49 DeiT] (pruners.py 228): INFO pruning_iterations_done:1
+[2023-07-27 17:16:49 DeiT] (pruners.py 229): INFO neuron_units:165
+[2023-07-27 17:16:49 DeiT] (pruners.py 230): INFO all_neuron_units:192
+[2023-07-27 17:16:49 DeiT] (pruners.py 231): INFO threshold_now:[85714360.0]
+[2023-07-27 17:16:49 DeiT] (engine.py 99): INFO Averaged stats:lr: 0.000001  loss: 3.5082 (3.5519)
+[2023-07-27 17:16:49 DeiT] (main.py 489): INFO pruned model complexity:
+[2023-07-27 17:16:50 DeiT] (utils.py 55): INFO number of params:5726860
+[2023-07-27 17:16:50 DeiT] (utils.py 56): INFO number of Attention GFLOPs:0.43872344493865967
+[2023-07-27 17:16:50 DeiT] (utils.py 57): INFO number of FC GFLOPs:0.4804858863353729
+[2023-07-27 17:16:50 DeiT] (utils.py 58): INFO number of total GFLOPs:0.9447622299194336
+[2023-07-27 17:16:50 DeiT] (main.py 492): INFO pruning percentage:
+[2023-07-27 17:16:50 DeiT] (main.py 493): INFO attn percentage:16.846993851456784
+[2023-07-27 17:16:50 DeiT] (main.py 494): INFO ffn percentage:31.099696851558583
+[2023-07-27 17:16:50 DeiT] (main.py 495): INFO total percentage:24.695597364156395
